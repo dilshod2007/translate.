@@ -1,0 +1,111 @@
+
+  /* Tailwind CSS utility classes */
+/* Nav.css */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #4A90E2; /* Underline color */
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::before {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: #4A90E2; /* Active text color */
+  font-weight: bold; /* Bold text for active link */
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Adjust if needed */
+  width: 0;
+  height: 1px; /* Thin line effect */
+  background-color: rgba(74, 144, 226, 0.5); /* Slightly transparent underline */
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+} 
+
+/* Custom styles for additional styling */
+.select-custom {
+  position: relative; /* For custom styling with pseudo-elements */
+}
+
+.select-custom::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #424242; /* Arrow color */
+  transform: translateY(-50%);
+  transition: border-top-color 0.3s ease-in-out;
+}
+
+.select-custom:hover::after {
+  border-top-color: #000; /* Darker arrow color on hover */
+}
+
+/* Optional: Focus and active styles */
+.select-custom:focus {
+  outline: none; /* Removes default outline */
+  border-color: #47ACDF; /* Change border color on focus */
+  box-shadow: 0 0 0 2px rgba(71, 172, 223, 0.3); /* Optional: Add shadow for better focus visibility */
+}
+/* Tailwind CSS utility classes */
+
+
+/* Custom styles for additional styling */
+.select-custom {
+  position: relative; /* For custom styling with pseudo-elements */
+}
+
+.select-custom::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #424242; /* Arrow color */
+  transform: translateY(-50%);
+  transition: border-top-color 0.3s ease-in-out;
+}
+
+.select-custom:hover::after {
+  border-top-color: #000; /* Darker arrow color on hover */
+}
+
+/* Optional: Focus and active styles */
+.select-custom:focus {
+  outline: none; /* Removes default outline */
+  border-color: #47ACDF; /* Change border color on focus */
+  box-shadow: 0 0 0 2px rgba(71, 172, 223, 0.3); /* Optional: Add shadow for better focus visibility */
+}
+.navbar {
+  width: 1440px;
+  background: linear-gradient(gray,white,white)
+}
+.til{
+  background: linear-gradient(gray,white,white)
+
+}

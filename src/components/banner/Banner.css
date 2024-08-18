@@ -1,0 +1,86 @@
+
+  /* Custom CSS for pseudo-elements */
+.card {
+  position: relative;
+}
+
+/* Custom CSS for card effects */
+.card {
+  position: relative; /* Needed for positioning pseudo-elements */
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #ed0e0e; /* Border color */
+  border-radius: 8px; /* Match the card's border radius */
+  pointer-events: none; /* Allows clicks to pass through */
+  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+  opacity: 0; /* Initially hidden */
+}
+
+.card:hover::before {
+  opacity: 1; /* Show border on hover */
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1); /* Subtle overlay effect */
+  pointer-events: none; /* Allows clicks to pass through */
+  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+  opacity: 0; /* Initially hidden */
+}
+
+.card:hover::after {
+  opacity: 0.2; /* Show overlay on hover */
+}
+.text-link {
+  position: relative;
+}
+.text-link:hover{
+  color: red;
+}
+
+.text-link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #e21316; /* Underline color */
+  transition: width 0.3s ease-in-out;
+}
+
+.text-link:hover::before {
+  width: 100%;
+}
+
+.text-link.active {
+  color: #4A90E2; /* Active text color */
+  font-weight: bold; /* Bold text for active link */
+}
+
+.text-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Adjust if needed */
+  width: 0;
+  height: 1px; /* Thin line effect */
+  background-color: rgba(74, 144, 226, 0.5); /* Slightly transparent underline */
+  transition: width 0.3s ease-in-out;
+}
+
+.text-link:hover::after {
+  width: 100%;
+}
